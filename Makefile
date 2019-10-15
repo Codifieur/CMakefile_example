@@ -1,5 +1,4 @@
 ##
-##
 ## Makefile
 ## File description:
 ## Makefile for basic project
@@ -9,24 +8,26 @@ SRC		=	src/main.c			\
 
 NAME	=	binary
 
-FLAGS	=	-W -Wall -Wextra -Werror
-
 LIB		=	-lmy
 
 LIB_DIR	=	lib/my/
 
 INCLUDE	=	include/
 
+CFLAGS	=	-W -Wall -Wextra -Werror -I $(INCLUDE)
+
+OBJ		=	$(SRC:.c=.o)
+
 CC		=	gcc
 
 all:	$(NAME)
 
-$(NAME):
+$(NAME):	$(OBJ)
 	make -C $(LIB_DIR)
-	$(CC) -o $(NAME) $(SRC) -L $(LIB_DIR) $(LIB) -I $(INCLUDE) $(FLAGS)
+	$(CC) -o $(NAME) -L $(LIB_DIR) $(LIB) $(FLAGS) $(OBJ)
 
 clean:
-	rm -f *~ *#
+	rm -f $(OBJ)
 
 fclean:	clean
 	rm -f $(NAME)
