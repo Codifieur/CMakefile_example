@@ -20,7 +20,7 @@ CC          =	gcc
 
 SRC_M       =	src/main.c			        \
 
-SRC_M       =	src/operation.c		        \
+SRC         =	src/operation.c		        \
 
 SRC_T       =	tests/tests_operation.c		\
 
@@ -30,9 +30,9 @@ OBJ_T       =	$(SRC:.c=.o) $(SRC_T:.c=.o)
 
 all:	$(NAME)
 
-$(NAME):	$(OBJ)
+$(NAME):	$(OBJ_M)
 	make -C $(LIB_DIR)
-	$(CC) -o $(NAME) -L $(LIB_DIR) $(LIB) $(FLAGS) $(OBJ)
+	$(CC) -o $(NAME) -L $(LIB_DIR) $(LIB) $(FLAGS) $(OBJ_M)
 
 clean:
 	make clean -C $(LIB_DIR)
