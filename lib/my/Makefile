@@ -1,7 +1,7 @@
 ##
 ## Makefile
 ## File description:
-## Makefile for lib.
+## Makefile for lib
 ##
 
 SRC	=	my_putchar.c

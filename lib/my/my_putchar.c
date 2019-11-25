@@ -1,8 +1,8 @@
 /*
-** EPITECH PROJECT, 2017
-** my_putchar
+** CMAKEFILE EXAMPLE, 2019
+** my_putchar.c
 ** File description:
-** my_putchar.
+** Print a simple char
 */
 
 #include <unistd.h>
