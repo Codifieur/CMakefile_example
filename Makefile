@@ -4,29 +4,29 @@
 ## Makefile for basic project
 ##
 
-NAME	=	binary
+NAME        =	binary
 
-NAME_T	=	unit_tests
+NAME_T	    =	unit_tests
 
-LIB		=	-lmy
+LIB		    =	-lmy
 
-LIB_DIR	=	lib/my/
+LIB_DIR	    =	lib/my/
 
-INCLUDE	=	include/
+INCLUDE	    =	include/
 
-CFLAGS	=	-W -Wall -Wextra -Werror -I $(INCLUDE)
+CFLAGS	    =	-W -Wall -Wextra -Werror -I $(INCLUDE)
 
-CC		=	gcc
+CC		    =	gcc
 
-SRC_M		=	src/main.c			\
+SRC_M		=	src/main.c			        \
 
-SRC			=	src/operation.c		\
+SRC 		=	src/operation.c		        \
 
 SRC_T		=	tests/tests_operation.c		\
 
-OBJ		=	$(SRC:.c=.o) $(SRC_M:.c=.o)
+OBJ		    =	$(SRC:.c=.o) $(SRC_M:.c=.o)
 
-OBJ_T 	=	$(SRC:.c=.o) $(SRC_T:.c=.o)
+OBJ_T 	    =	$(SRC:.c=.o) $(SRC_T:.c=.o)
 
 all:	$(NAME)
 
