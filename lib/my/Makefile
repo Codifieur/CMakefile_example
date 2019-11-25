@@ -4,15 +4,15 @@
 ## Makefile for lib
 ##
 
-SRC	=	my_putchar.c
+SRC			=	my_putchar.c
 
-OBJ	=	$(SRC:.c=.o)
+OBJ			=	$(SRC:.c=.o)
 
-NAME	=	libmy.a
+NAME		=	libmy.a
 
-INCLUDE_FILES	=	my.h
+INCLUDE_FILES		=	my.h
 
-INCLUDE_DIR		= 	../../include/
+INCLUDE_DIR			= 	../../include/
 
 LIB_DIR		=	../
 
